@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JSON AI Formatter helps you format, beautify, validate, and organize JSON data instantly with a clean modern interface.">
+    <meta name="keywords" content="JSON Formatter, JSON Beautifier, AI Formatter, JSON Validator, JSON Tool">
+    <meta name="author" content="JSON AI Formatter">
+
+    <title>JSON AI Formatter</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-light" style="font-family: 'Inter', sans-serif;">
+
+    <!-- Header -->
+    <header class="bg-white border-bottom shadow-sm">
+        <div class="container py-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="text-decoration-none text-dark fw-bold fs-4">
+                    <i class="fa-solid fa-code text-primary me-2"></i>
+                    JSON AI Formatter
+                </a>
+
+                <nav>
+                    <a href="#" class="text-decoration-none text-secondary me-3">Home</a>
+                    <a href="#" class="text-decoration-none text-secondary me-3">Tools</a>
+                    <a href="#" class="text-decoration-none text-secondary">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 text-center">
+
+                    <span class="badge bg-primary-subtle text-primary px-3 py-2 mb-3">
+                        AI Powered JSON Tool
+                    </span>
+
+                    <h1 class="fw-bold display-5 mb-3">
+                        Format & Beautify JSON Instantly
+                    </h1>
+
+                    <p class="text-secondary fs-5 mb-4">
+                        Clean, validate, and organize your JSON data with a modern AI-powered formatter designed for developers and API testing workflows.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Tool -->
+    <main class="pb-5">
+        <div class="container">
+
+            <div class="row g-4">
+
+                <!-- Formatter -->
+                <div class="col-lg-8">
+
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-brackets-curly text-primary fs-4 me-2"></i>
+                                <h2 class="h4 fw-semibold mb-0">
+                                    JSON Formatter
+                                </h2>
+                            </div>
+
+                            <p class="text-secondary mb-4">
+                                Paste your JSON below and click format to beautify the structure automatically.
+                            </p>
+
+                            <div class="mb-3">
+                                <textarea 
+                                    id="jsonInput"
+                                    class="form-control rounded-4"
+                                    rows="14"
+                                    placeholder='Paste JSON here...'></textarea>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <button class="btn btn-primary rounded-pill px-4" onclick="formatJSON()">
+                                    <i class="fa-solid fa-wand-magic-sparkles me-2"></i>
+                                    Format JSON
+                                </button>
+
+                                <button class="btn btn-outline-secondary rounded-pill px-4" onclick="clearJSON()">
+                                    <i class="fa-solid fa-trash me-2"></i>
+                                    Clear
+                                </button>
+
+                                <button class="btn btn-outline-dark rounded-pill px-4" onclick="copyJSON()">
+                                    <i class="fa-solid fa-copy me-2"></i>
+                                    Copy
+                                </button>
+                            </div>
+
+                            <div id="messageBox"></div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Ads -->
+                <div class="col-lg-4">
+
+                    <div class="card border-0 shadow-sm rounded-4 mb-4">
+                        <div class="card-body text-center p-4">
+
+                            <div class="mb-3">
+                                <i class="fa-solid fa-rectangle-ad fs-1 text-primary"></i>
+                            </div>
+
+                            <h3 class="h5 fw-semibold">
+                                Advertisement Space
+                            </h3>
+
+                            <p class="text-secondary small mb-0">
+                                Your responsive ad banner can be placed here.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+
+                            <h3 class="h5 fw-semibold mb-3">
+                                Features
+                            </h3>
+
+                            <ul class="list-unstyled mb-0">
+
+                                <li class="mb-3">
+                                    <i class="fa-solid fa-check text-success me-2"></i>
+                                    JSON Beautifier
+                                </li>
+
+                                <li class="mb-3">
+                                    <i class="fa-solid fa-check text-success me-2"></i>
+                                    JSON Validation
+                                </li>
+
+                                <li class="mb-3">
+                                    <i class="fa-solid fa-check text-success me-2"></i>
+                                    Copy & Export
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check text-success me-2"></i>
+                                    Responsive Layout
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Description -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-body p-4 p-lg-5">
+
+                    <h2 class="fw-bold mb-3">
+                        About JSON AI Formatter
+                    </h2>
+
+                    <p class="text-secondary mb-0">
+                        JSON AI Formatter is a lightweight modern web tool that helps developers quickly organize and validate JSON data. Built with Bootstrap 5 and a minimal clean interface, the tool works smoothly across desktop and mobile devices.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4">
+        <div class="container">
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center text-center text-lg-start">
+
+                <div class="mb-3 mb-lg-0">
+                    <span class="fw-semibold">
+                        JSON AI Formatter
+                    </span>
+                    <div class="text-secondary small">
+                        Modern JSON formatting tool for developers.
+                    </div>
+                </div>
+
+                <div class="text-secondary small">
+                    © 2026 JSON AI Formatter. All rights reserved.
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script -->
+    <script>
+        function formatJSON() {
+            const input = document.getElementById('jsonInput').value;
+            const messageBox = document.getElementById('messageBox');
+
+            try {
+                const parsed = JSON.parse(input);
+                const formatted = JSON.stringify(parsed, null, 4);
+
+                document.getElementById('jsonInput').value = formatted;
+
+                messageBox.innerHTML = `
+                    <div class="alert alert-success rounded-4 mt-3">
+                        JSON formatted successfully.
+                    </div>
+                `;
+            } catch (error) {
+                messageBox.innerHTML = `
+                    <div class="alert alert-danger rounded-4 mt-3">
+                        Invalid JSON format.
+                    </div>
+                `;
+            }
+        }
+
+        function clearJSON() {
+            document.getElementById('jsonInput').value = '';
+            document.getElementById('messageBox').innerHTML = '';
+        }
+
+        function copyJSON() {
+            const textarea = document.getElementById('jsonInput');
+
+            navigator.clipboard.writeText(textarea.value);
+
+            document.getElementById('messageBox').innerHTML = `
+                <div class="alert alert-primary rounded-4 mt-3">
+                    JSON copied to clipboard.
+                </div>
+            `;
+        }
+    </script>
+
+</body>
+</html>

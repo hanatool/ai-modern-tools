@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
+    <meta name="description" content="Regex AI Builder - Generate, test, and optimize regular expressions using AI." />
+    <meta name="keywords" content="Regex AI Builder, regex generator, regex tester, AI regex tool" />
+    <meta name="author" content="Regex AI Builder" />
+
+    <title>Regex AI Builder</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-light text-dark">
+
+    <!-- Header -->
+    <header class="border-bottom bg-white shadow-sm">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <a href="#" class="text-decoration-none text-dark fw-bold fs-4">
+                    <i class="fa-solid fa-code me-2 text-primary"></i>
+                    Regex AI Builder
+                </a>
+
+                <nav class="d-none d-md-flex gap-4">
+                    <a href="#" class="text-decoration-none text-secondary">Home</a>
+                    <a href="#" class="text-decoration-none text-secondary">Features</a>
+                    <a href="#" class="text-decoration-none text-secondary">Docs</a>
+                    <a href="#" class="text-decoration-none text-secondary">Contact</a>
+                </nav>
+
+                <button class="btn btn-primary rounded-pill px-4">
+                    Try Now
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="py-5 bg-white border-bottom">
+        <div class="container py-4">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+
+                    <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill mb-3">
+                        AI Powered Regex Generator
+                    </span>
+
+                    <h1 class="display-5 fw-bold mb-3">
+                        Build Regex Instantly With AI
+                    </h1>
+
+                    <p class="lead text-secondary mb-4">
+                        Generate, explain, and test regular expressions using artificial intelligence.
+                        Fast, modern, and beginner friendly.
+                    </p>
+
+                    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                        <button class="btn btn-primary btn-lg px-4 rounded-pill">
+                            <i class="fa-solid fa-wand-magic-sparkles me-2"></i>
+                            Generate Regex
+                        </button>
+
+                        <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill">
+                            <i class="fa-solid fa-circle-info me-2"></i>
+                            Learn More
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Tool -->
+    <main class="py-5">
+        <div class="container">
+
+            <div class="row g-4">
+
+                <!-- Tool -->
+                <div class="col-lg-8">
+
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+
+                            <h2 class="h4 fw-bold mb-3">
+                                AI Regex Builder
+                            </h2>
+
+                            <p class="text-secondary mb-4">
+                                Describe what you want to match and let AI create the perfect regular expression.
+                            </p>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Describe Your Pattern
+                                </label>
+
+                                <textarea
+                                    id="promptInput"
+                                    class="form-control form-control-lg"
+                                    rows="5"
+                                    placeholder="Example: Match email addresses ending with gmail.com">
+                                </textarea>
+                            </div>
+
+                            <button
+                                class="btn btn-primary btn-lg rounded-pill px-4"
+                                id="generateBtn"
+                            >
+                                <i class="fa-solid fa-bolt me-2"></i>
+                                Generate Regex
+                            </button>
+
+                            <div class="mt-4">
+                                <label class="form-label fw-semibold">
+                                    Generated Regex
+                                </label>
+
+                                <div
+                                    id="regexOutput"
+                                    class="bg-light border rounded-4 p-3 text-break"
+                                >
+                                    Your regex result will appear here...
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Ads -->
+                <div class="col-lg-4">
+
+                    <div class="card border-0 shadow-sm rounded-4 mb-4">
+                        <div class="card-body text-center p-4">
+
+                            <div class="mb-3">
+                                <i class="fa-solid fa-rectangle-ad fa-3x text-primary"></i>
+                            </div>
+
+                            <h3 class="h5 fw-bold">
+                                Advertisement
+                            </h3>
+
+                            <p class="text-secondary small mb-0">
+                                Your ad placement area.
+                                Google Ads or banner ads can be inserted here.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+
+                            <h3 class="h5 fw-bold mb-3">
+                                Features
+                            </h3>
+
+                            <ul class="list-unstyled mb-0">
+
+                                <li class="mb-3">
+                                    <i class="fa-solid fa-check text-success me-2"></i>
+                                    AI Regex Generation
+                                </li>
+
+                                <li class="mb-3">
+                                    <i class="fa-solid fa-check text-success me-2"></i>
+                                    Regex Explanation
+                                </li>
+
+                                <li class="mb-3">
+                                    <i class="fa-solid fa-check text-success me-2"></i>
+                                    Real-time Testing
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check text-success me-2"></i>
+                                    Beginner Friendly
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Description -->
+    <section class="pb-5">
+        <div class="container">
+
+            <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-body p-4 p-lg-5">
+
+                    <div class="row g-4">
+
+                        <div class="col-md-4">
+                            <div class="text-center">
+
+                                <div class="mb-3">
+                                    <i class="fa-solid fa-robot fa-2x text-primary"></i>
+                                </div>
+
+                                <h4 class="fw-bold">
+                                    AI Powered
+                                </h4>
+
+                                <p class="text-secondary mb-0">
+                                    Create advanced regex patterns using simple natural language.
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="text-center">
+
+                                <div class="mb-3">
+                                    <i class="fa-solid fa-shield-halved fa-2x text-primary"></i>
+                                </div>
+
+                                <h4 class="fw-bold">
+                                    Secure
+                                </h4>
+
+                                <p class="text-secondary mb-0">
+                                    Fast and safe regex generation for developers and beginners.
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="text-center">
+
+                                <div class="mb-3">
+                                    <i class="fa-solid fa-gauge-high fa-2x text-primary"></i>
+                                </div>
+
+                                <h4 class="fw-bold">
+                                    Fast Performance
+                                </h4>
+
+                                <p class="text-secondary mb-0">
+                                    Lightweight and responsive interface with modern Bootstrap design.
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4">
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <span class="text-secondary">
+                        © 2026 Regex AI Builder. All rights reserved.
+                    </span>
+                </div>
+
+                <div class="col-md-6 text-center text-md-end">
+
+                    <a href="#" class="text-secondary me-3">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="#" class="text-secondary me-3">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="#" class="text-secondary">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script -->
+    <script>
+        const generateBtn = document.getElementById('generateBtn');
+        const promptInput = document.getElementById('promptInput');
+        const regexOutput = document.getElementById('regexOutput');
+
+        generateBtn.addEventListener('click', () => {
+
+            const input = promptInput.value.trim();
+
+            if (!input) {
+                regexOutput.innerHTML = 'Please describe the regex pattern.';
+                return;
+            }
+
+            regexOutput.innerHTML = `
+                <code>/^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$/</code>
+            `;
+        });
+    </script>
+
+</body>
+</html>

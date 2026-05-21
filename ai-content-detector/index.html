@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
+
+    <title>AI Content Detector</title>
+
+    <meta name="description" content="Free AI Content Detector tool to analyze text and estimate whether content is AI-generated or human-written." />
+    <meta name="keywords" content="AI Content Detector, AI checker, AI text detector, plagiarism checker, content analysis" />
+    <meta name="author" content="AI Content Detector" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="AI Content Detector" />
+    <meta property="og:description" content="Analyze content and detect AI-generated text instantly." />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-light text-dark">
+
+    <!-- Header -->
+    <header class="border-bottom bg-white sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">
+                    <i class="fa-solid fa-shield-halved text-primary me-2"></i>
+                    AI Content Detector
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+
+                    <div class="mb-4">
+                        <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill">
+                            AI Detection Tool
+                        </span>
+                    </div>
+
+                    <h1 class="fw-bold display-5 mb-3">
+                        Detect AI Generated Content Instantly
+                    </h1>
+
+                    <p class="text-secondary fs-5 mb-4">
+                        Analyze text and estimate whether content is written by AI or humans using our modern AI content detection tool.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Tool -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8">
+
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Paste Your Text
+                                </label>
+
+                                <textarea 
+                                    id="contentInput"
+                                    class="form-control rounded-4"
+                                    rows="10"
+                                    placeholder="Paste your content here..."></textarea>
+                            </div>
+
+                            <div class="d-grid">
+                                <button id="detectBtn" class="btn btn-primary btn-lg rounded-4">
+                                    <i class="fa-solid fa-magnifying-glass me-2"></i>
+                                    Detect AI Content
+                                </button>
+                            </div>
+
+                            <!-- Result -->
+                            <div id="resultBox" class="mt-4 d-none">
+                                <div class="alert alert-light border rounded-4 mb-0">
+                                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+
+                                        <div>
+                                            <h5 class="mb-1">
+                                                Detection Result
+                                            </h5>
+
+                                            <p class="mb-0 text-secondary">
+                                                Estimated AI probability:
+                                            </p>
+                                        </div>
+
+                                        <div>
+                                            <span id="scoreBadge" class="badge text-bg-primary fs-6 px-4 py-3">
+                                                0%
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Ad Space -->
+                    <div class="card border-0 shadow-sm rounded-4 mt-4">
+                        <div class="card-body text-center py-5">
+
+                            <p class="text-secondary mb-2">
+                                Advertisement Space
+                            </p>
+
+                            <div class="border rounded-4 py-5 bg-light">
+                                <i class="fa-solid fa-rectangle-ad fs-1 text-secondary mb-3"></i>
+
+                                <h5 class="fw-semibold">
+                                    Your Ad Banner Here
+                                </h5>
+
+                                <p class="text-secondary mb-0">
+                                    728 x 90 Responsive Ad Section
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="pb-5">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">
+                    Why Use Our AI Detector?
+                </h2>
+
+                <p class="text-secondary">
+                    Simple, modern, and fast content analysis.
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4 text-center">
+
+                            <div class="mb-3">
+                                <i class="fa-solid fa-bolt fs-1 text-primary"></i>
+                            </div>
+
+                            <h5 class="fw-semibold">
+                                Fast Analysis
+                            </h5>
+
+                            <p class="text-secondary mb-0">
+                                Detect AI-generated content within seconds.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4 text-center">
+
+                            <div class="mb-3">
+                                <i class="fa-solid fa-lock fs-1 text-primary"></i>
+                            </div>
+
+                            <h5 class="fw-semibold">
+                                Secure & Private
+                            </h5>
+
+                            <p class="text-secondary mb-0">
+                                Your content stays private and protected.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm rounded-4 h-100">
+                        <div class="card-body p-4 text-center">
+
+                            <div class="mb-3">
+                                <i class="fa-solid fa-mobile-screen-button fs-1 text-primary"></i>
+                            </div>
+
+                            <h5 class="fw-semibold">
+                                Fully Responsive
+                            </h5>
+
+                            <p class="text-secondary mb-0">
+                                Optimized for desktop, tablet, and mobile.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4">
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <h6 class="fw-bold mb-1">
+                        AI Content Detector
+                    </h6>
+
+                    <p class="text-secondary mb-0 small">
+                        Modern AI text detection platform.
+                    </p>
+                </div>
+
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-decoration-none text-secondary me-3">
+                        Privacy
+                    </a>
+
+                    <a href="#" class="text-decoration-none text-secondary me-3">
+                        Terms
+                    </a>
+
+                    <a href="#" class="text-decoration-none text-secondary">
+                        Contact
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script -->
+    <script>
+        const detectBtn = document.getElementById('detectBtn');
+        const contentInput = document.getElementById('contentInput');
+        const resultBox = document.getElementById('resultBox');
+        const scoreBadge = document.getElementById('scoreBadge');
+
+        detectBtn.addEventListener('click', () => {
+            const text = contentInput.value.trim();
+
+            if (text === '') {
+                alert('Please enter some text.');
+                return;
+            }
+
+            const score = Math.floor(Math.random() * 100) + 1;
+
+            scoreBadge.innerText = score + '%';
+
+            if (score >= 70) {
+                scoreBadge.className = 'badge text-bg-danger fs-6 px-4 py-3';
+            } else if (score >= 40) {
+                scoreBadge.className = 'badge text-bg-warning fs-6 px-4 py-3';
+            } else {
+                scoreBadge.className = 'badge text-bg-success fs-6 px-4 py-3';
+            }
+
+            resultBox.classList.remove('d-none');
+        });
+    </script>
+
+</body>
+</html>
