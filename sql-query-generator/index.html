@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,19 +14,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body class="bg-light text-dark d-flex flex-column min-vh-100">
 
     <!-- Header -->
     <header class="border-bottom bg-white shadow-none">
-        <div class="container py-3 d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center gap-2">
-                <i class="fa-solid fa-database fs-3 text-primary"></i>
-                <h1 class="h4 mb-0 fw-bold">SQL Query Generator</h1>
-            </div>
+        <div class="container">
+            <nav class="navbar d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-database fs-3 text-primary"></i>
+                    <h1 class="h4 mb-0 fw-bold">SQL Query Generator</h1>
+                </div>
 
-            <button class="btn btn-outline-primary btn-sm">
-                <i class="fa-solid fa-code"></i> Generate
-            </button>
+                <button class="btn btn-outline-primary btn-sm">
+                    <i class="fa-solid fa-code"></i> Generate
+                </button>
+            </nav>
         </div>
     </header>
 
@@ -37,7 +41,8 @@
             <div class="text-center mb-5">
                 <h2 class="fw-bold mb-3">Build SQL Queries Instantly</h2>
                 <p class="text-secondary mx-auto" style="max-width: 700px;">
-                    Create clean and optimized SQL queries using a modern and responsive interface. Select tables, columns, conditions, and generate SQL code instantly.
+                    Create clean and optimized SQL queries using a modern and responsive interface. Select tables,
+                    columns, conditions, and generate SQL code instantly.
                 </p>
             </div>
 
@@ -48,17 +53,20 @@
                     <div class="row g-4">
                         <div class="col-md-6">
                             <label class="form-label fw-semibold">Select Table</label>
-                            <input type="text" class="form-control form-control-lg" id="tableName" placeholder="Example: users">
+                            <input type="text" class="form-control form-control-lg" id="tableName"
+                                placeholder="Example: users">
                         </div>
 
                         <div class="col-md-6">
                             <label class="form-label fw-semibold">Columns</label>
-                            <input type="text" class="form-control form-control-lg" id="columns" placeholder="Example: id, name, email">
+                            <input type="text" class="form-control form-control-lg" id="columns"
+                                placeholder="Example: id, name, email">
                         </div>
 
                         <div class="col-md-6">
                             <label class="form-label fw-semibold">Condition</label>
-                            <input type="text" class="form-control form-control-lg" id="condition" placeholder="Example: status = 'active'">
+                            <input type="text" class="form-control form-control-lg" id="condition"
+                                placeholder="Example: status = 'active'">
                         </div>
 
                         <div class="col-md-6 d-flex align-items-end">
@@ -72,7 +80,8 @@
                     <!-- Output -->
                     <div class="mt-5">
                         <label class="form-label fw-semibold">Generated Query</label>
-                        <textarea class="form-control" id="output" rows="6" readonly placeholder="Your SQL query will appear here..."></textarea>
+                        <textarea class="form-control" id="output" rows="6" readonly
+                            placeholder="Your SQL query will appear here..."></textarea>
                     </div>
 
                 </div>
@@ -133,5 +142,6 @@
     </script>
 
 </body>
+
 </html>
 ```
