@@ -1,210 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Prompt Generator - Create AI prompts easily and quickly." />
+    <meta name="keywords" content="prompt generator, ai prompt, text generator, bootstrap tool" />
+    <meta name="author" content="Prompt Generator" />
     <title>Prompt Generator</title>
-
-    <meta name="description" content="Modern AI Prompt Generator tool with responsive Bootstrap layout." />
-    <meta name="keywords" content="Prompt Generator, AI Prompt Tool, Bootstrap Prompt Generator, AI Tools" />
-    <meta name="author" content="OpenAI" />
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #f8f9fa;
-            color: #212529;
-        }
-
-        .hero-section {
-            padding: 80px 0;
-        }
-
-        .tool-card {
-            border: none;
-            border-radius: 20px;
-            background: #ffffff;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        }
-
-        .ad-box {
-            border: 2px dashed #dee2e6;
-            border-radius: 16px;
-            background: #ffffff;
-            min-height: 120px;
-        }
-
-        textarea {
-            resize: none;
-        }
-
-        footer {
-            background: #ffffff;
-            border-top: 1px solid #e9ecef;
-        }
-
-        .btn-generate {
-            border-radius: 12px;
-        }
-    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-light text-dark">
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-dark" href="#">
+                <i class="fa-solid fa-wand-magic-sparkles text-primary me-2"></i> PromptGen
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Docs</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Header -->
-    <header class="border-bottom bg-white shadow-none sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container">
-                <a class="navbar-brand fw-bold text-decoration-none text-dark" href="#">
-                    <i class="fa-solid fa-wand-magic-sparkles me-2 text-primary"></i>
-                    Prompt Generator
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarMenu">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Generator</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <header class="py-5 bg-white border-bottom">
+        <div class="container text-center">
+            <h1 class="fw-bold">AI Prompt Generator</h1>
+            <p class="text-muted">Create powerful prompts instantly for AI tools like ChatGPT, Midjourney, and more.</p>
+        </div>
     </header>
 
-    <!-- Hero -->
-    <section class="hero-section">
-        <div class="container">
+    <!-- Main Content -->
+    <div class="container my-4">
 
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
+        <div class="row g-4">
 
-                    <h1 class="fw-bold mb-3">
-                        Create Powerful AI Prompts Instantly
-                    </h1>
+            <!-- Generator -->
+            <div class="col-lg-8">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <h5 class="mb-3"><i class="fa-solid fa-bolt"></i> Generate Prompt</h5>
 
-                    <p class="text-secondary mb-5">
-                        Generate modern and optimized prompts for ChatGPT, Midjourney,
-                        Claude, Gemini, and other AI platforms with a clean and responsive interface.
-                    </p>
+                        <input id="topic" type="text" class="form-control mb-3"
+                            placeholder="Enter your idea (e.g. futuristic city, marketing ad, story idea)">
 
+                        <select id="type" class="form-select mb-3">
+                            <option value="story">Story Prompt</option>
+                            <option value="image">Image Prompt</option>
+                            <option value="marketing">Marketing Prompt</option>
+                            <option value="coding">Coding Prompt</option>
+                        </select>
+
+                        <button class="btn btn-primary w-100" onclick="generatePrompt()">
+                            Generate
+                        </button>
+
+                        <hr>
+
+                        <textarea id="output" class="form-control" rows="6"
+                            placeholder="Your generated prompt will appear here..."></textarea>
+
+                        <button class="btn btn-outline-secondary mt-2 w-100" onclick="copyText()">
+                            Copy Prompt
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            <!-- Generator Card -->
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
+            <!-- Ads Section -->
+            <div class="col-lg-4">
 
-                    <div class="card tool-card p-4">
-
-                        <div class="mb-4">
-                            <label class="form-label fw-semibold">
-                                Prompt Topic
-                            </label>
-
-                            <input 
-                                type="text" 
-                                class="form-control form-control-lg" 
-                                id="topicInput"
-                                placeholder="Example: futuristic city"
-                            >
-                        </div>
-
-                        <div class="mb-4">
-                            <label class="form-label fw-semibold">
-                                Generated Prompt
-                            </label>
-
-                            <textarea 
-                                class="form-control" 
-                                rows="6" 
-                                id="resultBox"
-                                placeholder="Your AI prompt will appear here..."
-                            ></textarea>
-                        </div>
-
-                        <div class="d-grid">
-                            <button class="btn btn-primary btn-lg btn-generate" id="generateBtn">
-                                <i class="fa-solid fa-bolt me-2"></i>
-                                Generate Prompt
-                            </button>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Advertisement -->
-            <div class="row justify-content-center mt-5">
-                <div class="col-lg-8">
-
-                    <div class="ad-box d-flex align-items-center justify-content-center text-secondary">
-                        <div class="text-center">
-                            <i class="fa-solid fa-rectangle-ad fa-2x mb-3"></i>
-                            <p class="mb-0">Advertisement Space</p>
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-body text-center">
+                        <small class="text-muted">Advertisement</small>
+                        <div class="bg-light border rounded p-5 mt-2">
+                            Ad Space 1
                         </div>
                     </div>
-
                 </div>
+
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <small class="text-muted">Advertisement</small>
+                        <div class="bg-light border rounded p-5 mt-2">
+                            Ad Space 2
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
-    <footer class="py-4">
+    <footer class="bg-white border-top py-4 mt-5">
         <div class="container text-center">
-            <p class="mb-0 text-secondary">
-                © 2026 Prompt Generator. All rights reserved.
+            <p class="mb-0 text-muted">
+                © 2026 PromptGen. Built with Bootstrap & Font Awesome.
             </p>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
     <!-- Script -->
     <script>
-        const generateBtn = document.getElementById('generateBtn');
-        const topicInput = document.getElementById('topicInput');
-        const resultBox = document.getElementById('resultBox');
+        function generatePrompt() {
+            const topic = document.getElementById("topic").value;
+            const type = document.getElementById("type").value;
 
-        generateBtn.addEventListener('click', () => {
-
-            const topic = topicInput.value.trim();
-
-            if(topic === '') {
-                resultBox.value = 'Please enter a topic first.';
+            if (!topic) {
+                alert("Please enter a topic!");
                 return;
             }
 
-            const prompt = `Create a highly detailed and professional AI-generated content about ${topic} with cinematic lighting, ultra realistic details, modern style, high quality composition, and creative storytelling.`;
+            let prompt = "";
 
-            resultBox.value = prompt;
+            switch (type) {
+                case "story":
+                    prompt =
+                        `Write a creative and engaging story about: ${topic}. Include characters, conflict, and resolution.`;
+                    break;
+                case "image":
+                    prompt =
+                        `Generate a highly detailed image description of: ${topic}. Include lighting, environment, style, and mood.`;
+                    break;
+                case "marketing":
+                    prompt =
+                        `Create a persuasive marketing copy for: ${topic}. Focus on benefits and emotional appeal.`;
+                    break;
+                case "coding":
+                    prompt = `Write clean and efficient code for: ${topic}. Include comments and best practices.`;
+                    break;
+            }
 
-        });
+            document.getElementById("output").value = prompt;
+        }
+
+        function copyText() {
+            const output = document.getElementById("output");
+            output.select();
+            document.execCommand("copy");
+            alert("Prompt copied!");
+        }
     </script>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>

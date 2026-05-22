@@ -26,7 +26,7 @@
 <body class="bg-light text-dark">
 
     <!-- Header -->
-    <header class="border-bottom bg-white shadow-none sticky-top">
+    <header class="border-bottom bg-white sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light container">
             <div class="container">
                 <a href="#" class="navbar-brand fw-bold text-decoration-none text-dark">
@@ -197,7 +197,10 @@
                 </div>
 
                 <small>
-                    © 2026 All Rights Reserved.
+                    © <script type='text/javascript'>
+                        var creditsyear = new Date();
+                        document.write(creditsyear.getFullYear());
+                    </script> All Rights Reserved.
                 </small>
 
             </div>
