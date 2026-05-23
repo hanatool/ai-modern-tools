@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+
+  <channel>
+
+    <title>Hanapha AI Modern Tools</title>
+    <link>https://tools.hanapha.com/ai-modern-tools</link>
+
+    <description>
+      Free AI-powered online tools for content generation, prompt optimization, hashtag creation, regex building, SQL query generation, and more.
+    </description>
+
+    <language>en-us</language>
+
+    <item>
+      <title>AI Content Detector</title>
+      <link>https://tools.hanapha.com/ai-modern-tools/ai-content-detector</link>
+      <description>
+        Detect AI-generated content quickly and easily online.
+      </description>
+    </item>
+
+    <item>
+      <title>AI Prompt Optimizer</title>
+      <link>https://tools.hanapha.com/ai-modern-tools/ai-prompt-optimizer</link>
+      <description>
+        Improve and optimize AI prompts for better results.
+      </description>
+    </item>
+
+    <item>
+      <title>Blog Title Generator</title>
+      <link>https://tools.hanapha.com/ai-modern-tools/blog-title-generator</link>
+      <description>
+        Generate catchy and SEO-friendly blog titles instantly.
+      </description>
+    </item>
+
+    <item>
+      <title>Hashtag Generator</title>
+      <link>https://tools.hanapha.com/ai-modern-tools/hashtag-generator</link>
+      <description>
+        Create trending hashtags for social media content.
+      </description>
+    </item>
+
+    <item>
+      <title>JSON AI Formatter</title>
+      <link>https://tools.hanapha.com/ai-modern-tools/json-ai-formatter</link>
+      <description>
+        Format and beautify JSON data with AI assistance.
+      </description>
+    </item>
+
+    <item>
+      <title>Prompt Generator</title>
+      <link>https://tools.hanapha.com/ai-modern-tools/prompt-generator</link>
+      <description>
+        Generate creative prompts for AI tools and content creation.
+      </description>
+    </item>
+
+    <item>
+      <title>Regex AI Builder</title>
+      <link>https://tools.hanapha.com/ai-modern-tools/regex-ai-builder</link>
+      <description>
+        Build regular expressions using AI assistance online.
+      </description>
+    </item>
+
+    <item>
+      <title>SQL Query Generator</title>
+      <link>https://tools.hanapha.com/ai-modern-tools/sql-query-generator</link>
+      <description>
+        Generate SQL queries automatically with AI support.
+      </description>
+    </item>
+
+    <item>
+      <title>YouTube Title Generator</title>
+      <link>https://tools.hanapha.com/ai-modern-tools/youtube-title-generator</link>
+      <description>
+        Create engaging YouTube video titles instantly.
+      </description>
+    </item>
+
+  </channel>
+
+</rss>
